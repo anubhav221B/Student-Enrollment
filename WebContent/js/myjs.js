@@ -6,7 +6,7 @@ function isValid(name,email,website,image,gender,skills){
     }
 	if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))){
 		alert("You have entered an invalid email address!")
-		document.getElementById("website").focus();
+		document.getElementById("email").focus();
 		return (false)
 	}
 	if (website.length === 0) {
@@ -52,7 +52,7 @@ function addData(){
 	let table = document.getElementById("tableResult");
     let tableData = "<b>" + name + "</b>" + "<br>" + gender + "<br>" + email + "<br><a target='_blank' href=http://" + website + ">" + website + "</a><br>";
     tableData += skills;
-
+	
 
     let row = table.insertRow(1);
 
